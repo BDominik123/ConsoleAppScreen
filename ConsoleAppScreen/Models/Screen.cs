@@ -19,6 +19,20 @@ namespace ConsoleAppScreen.Models
         static public void DrawRectangle(byte x, byte y, byte width, byte height, char sign = '*')
         {
             // TODO : (Jancsi) Téglalap rajzolásának implementációja a képernyőn
+            for (byte i = 0; i <= height; i++)
+            {
+                Console.SetCursorPosition(x, y + i);
+                Console.WriteLine(sign);
+                Console.SetCursorPosition(x + width, y + i);
+                Console.WriteLine(sign);
+            }
+            for (byte j = 1; j < width; j++)
+            {
+                Console.SetCursorPosition(x + j, y);
+                Console.WriteLine(sign);
+                Console.SetCursorPosition(x + j, y + height);
+                Console.WriteLine(sign);
+            }
         }
 
         /// <summary>
