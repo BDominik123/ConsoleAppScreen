@@ -20,7 +20,7 @@ namespace ConsoleAppScreen
             //Console.WriteLine(mixedText);
             // Például két szöveg ismétlése
             string repeatedText = Screen.RepeatedStrings("AB", "12", 5);
-            //Console.WriteLine(repeatedText);
+            Console.WriteLine(repeatedText);
         }
     }
 }
