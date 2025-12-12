@@ -99,7 +99,18 @@ namespace ConsoleAppScreen.Models
             // textA = "abcd"
             // textB = "12345"
             // Kimenet: a1b2c3d45
-            throw new NotImplementedException();
+
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < textA.Length;)
+            {
+                for (int j = 0; j < textB.Length;)
+                {
+                    if (i != textA.Length) {sb.Append(textA[i]); i++;}
+                    if (j != textB.Length) {sb.Append(textB[j]); j++;}
+                }
+            }
+            return sb.ToString();
         }
 
         // TODO : (Juliska) Két szöveg ismételt váltakozásának implementációja
