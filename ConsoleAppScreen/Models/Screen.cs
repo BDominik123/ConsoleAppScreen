@@ -32,6 +32,16 @@ namespace ConsoleAppScreen.Models
         static public void FillRectangle(byte x, byte y, byte width, byte height, char sign = '■')
         {
             // TODO : (Juliska) Kitöltött téglalap rajzolásának implementációja a képernyőn
+            Console.SetCursorPosition(x, y);
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    Console.Write(sign);
+                }
+                Console.WriteLine();
+                Console.SetCursorPosition(x,y+i);
+            }
         }
 
         /// <summary>
@@ -56,7 +66,8 @@ namespace ConsoleAppScreen.Models
         static public string AlignTextCenter(string text, int width)
         {
             // TODO : (Juliska) Szöveg középre igazításának implementációja
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return "";
         }
 
         /// <summary>
@@ -77,7 +88,8 @@ namespace ConsoleAppScreen.Models
             // textA = "abcd"
             // textB = "12345"
             // Kimenet: a1b2c3d45
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return "";
         }
 
         // TODO : (Juliska) Két szöveg ismételt váltakozásának implementációja
@@ -96,7 +108,8 @@ namespace ConsoleAppScreen.Models
             // iteration = 3
             // Kimenet: HiThereHiThereHiThere
 
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return "";
         }
     }
 }
