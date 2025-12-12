@@ -59,6 +59,14 @@ namespace ConsoleAppScreen.Models
         static public void DrawLine(byte x1, byte y1, byte x2, byte y2, char sign = '*')
         {
             // TODO : (jancsi) Vonal rajzolásának implementációja a képernyőn
+            for (byte i = 0; i <= x2 - x1; i++)
+            {
+                for (byte j = 0; j <= y2 - y1; j++)
+                {
+                    Console.SetCursorPosition(x1 + i, y1 + j);
+                    Console.WriteLine(sign);
+                }
+            }
         }
 
         /// <summary>

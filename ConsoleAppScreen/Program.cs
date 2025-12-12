@@ -21,6 +21,8 @@ namespace ConsoleAppScreen
             // Például két szöveg ismétlése
             string repeatedText = Screen.RepeatedStrings("AB", "12", 5);
             Console.WriteLine(repeatedText);
+
+           
         }
     }
 }
