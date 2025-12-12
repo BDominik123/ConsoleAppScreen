@@ -46,6 +46,15 @@ namespace ConsoleAppScreen.Models
         static public void FillRectangle(byte x, byte y, byte width, byte height, char sign = '■')
         {
             // TODO : (Juliska) Kitöltött téglalap rajzolásának implementációja a képernyőn
+            for (int i = 0; i < height; i++)
+            {
+                Console.SetCursorPosition(x,y+i);
+                for (int j = 0; j < width; j++)
+                {
+                    Console.Write(sign);
+                }
+                Console.WriteLine();
+            }
         }
 
         /// <summary>
@@ -78,7 +87,13 @@ namespace ConsoleAppScreen.Models
         static public string AlignTextCenter(string text, int width)
         {
             // TODO : (Juliska) Szöveg középre igazításának implementációja
-            throw new NotImplementedException();
+            string output = "";
+
+            int buh = width - text.Length;
+            
+            output = output.PadLeft(buh / 2, ' ') + text + output.PadRight(buh / 2, ' ');
+
+            return output;
         }
 
         /// <summary>
@@ -123,13 +138,20 @@ namespace ConsoleAppScreen.Models
         /// <returns>A két szöveg ismételt váltakozásával elkészített szöveg</returns>
         public static string RepeatedStrings(string textA, string textB, int iteration)
         {
+            string output = "";
+
             // példa:
             // textA = "Hi"
             // textB = "There"
             // iteration = 3
             // Kimenet: HiThereHiThereHiThere
 
-            throw new NotImplementedException();
+            for (int i = 0; !(i == iteration); i++)
+            {
+                output += textA+textB;
+            }
+
+            return output;
         }
     }
 }
