@@ -6,8 +6,10 @@ namespace ConsoleAppScreen
     {
         static void Main(string[] args)
         {
+            //Console width max = 119
+            //Console height max = 24
             // Például egy téglalap rajzolása a képernyőn
-            Screen.DrawRectangle(10, 5, 20, 10);
+            Screen.DrawRectangle(0, 0, 119, 24);
             // Például egy kitöltött téglalap rajzolása a képernyőn
             Screen.FillRectangle(40, 5, 20, 10);
             // Például egy vonal rajzolása a képernyőn

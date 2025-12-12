@@ -45,6 +45,7 @@ namespace ConsoleAppScreen.Models
         /// <param name="sign">A kitöltéshez használt karakter</param>
         static public void FillRectangle(byte x, byte y, byte width, byte height, char sign = '■')
         {
+            
             // TODO : (Juliska) Kitöltött téglalap rajzolásának implementációja a képernyőn
             for (int i = 0; i < height; i++)
             {
