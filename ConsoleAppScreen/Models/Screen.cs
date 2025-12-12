@@ -65,8 +65,13 @@ namespace ConsoleAppScreen.Models
         static public string AlignTextCenter(string text, int width)
         {
             // TODO : (Juliska) Szöveg középre igazításának implementációja
-            //throw new NotImplementedException();
-            return "";
+            string output = "";
+
+            int buh = width - text.Length;
+            
+            output = output.PadLeft(buh / 2, ' ') + text + output.PadRight(buh / 2, ' ');
+
+            return output;
         }
 
         /// <summary>

@@ -14,7 +14,7 @@ namespace ConsoleAppScreen
             //Screen.DrawLine(10, 20, 60, 20);
             // Például szöveg középre igazítása
             string centeredText = Screen.AlignTextCenter("Középre igazított szöveg", 50);
-            //Console.WriteLine(centeredText);
+            Console.WriteLine(centeredText);
             // Például két szöveg keverése
             string mixedText = Screen.MixedStrings("Hello", "World");
             //Console.WriteLine(mixedText);
