@@ -19,6 +19,20 @@ namespace ConsoleAppScreen.Models
         static public void DrawRectangle(byte x, byte y, byte width, byte height, char sign = '*')
         {
             // TODO : (Jancsi) Téglalap rajzolásának implementációja a képernyőn
+            for (byte i = 0; i <= height; i++)
+            {
+                Console.SetCursorPosition(x, y + i);
+                Console.WriteLine(sign);
+                Console.SetCursorPosition(x + width, y + i);
+                Console.WriteLine(sign);
+            }
+            for (byte j = 1; j < width; j++)
+            {
+                Console.SetCursorPosition(x + j, y);
+                Console.WriteLine(sign);
+                Console.SetCursorPosition(x + j, y + height);
+                Console.WriteLine(sign);
+            }
         }
 
         /// <summary>
@@ -54,6 +68,14 @@ namespace ConsoleAppScreen.Models
         static public void DrawLine(byte x1, byte y1, byte x2, byte y2, char sign = '*')
         {
             // TODO : (jancsi) Vonal rajzolásának implementációja a képernyőn
+            for (byte i = 0; i <= x2 - x1; i++)
+            {
+                for (byte j = 0; j <= y2 - y1; j++)
+                {
+                    Console.SetCursorPosition(x1 + i, y1 + j);
+                    Console.WriteLine(sign);
+                }
+            }
         }
 
         /// <summary>
@@ -92,8 +114,18 @@ namespace ConsoleAppScreen.Models
             // textA = "abcd"
             // textB = "12345"
             // Kimenet: a1b2c3d45
-            //throw new NotImplementedException();
-            return "";
+
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < textA.Length;)
+            {
+                for (int j = 0; j < textB.Length;)
+                {
+                    if (i != textA.Length) {sb.Append(textA[i]); i++;}
+                    if (j != textB.Length) {sb.Append(textB[j]); j++;}
+                }
+            }
+            return sb.ToString();
         }
 
         // TODO : (Juliska) Két szöveg ismételt váltakozásának implementációja
